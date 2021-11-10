@@ -1,0 +1,34 @@
+<h1>{{title}}</h1>
+
+<table>
+    <tr>
+        <td>Fname</td>
+        <td>Minit</td>
+        <td>Lname</td>
+        <td>Ssn</td>
+        <td>Bdata</td>
+        <td>Address</td>
+        <td>Sex</td>
+        <td>Salary</td>
+        <td>Super_ssn</td>
+        <td>Dno</td>
+    </tr>
+    {{#each emp_res}}
+        <form method="post" action='/update/employee'>
+        <tr>
+            <td>{{Fname}}</td>
+            <td>{{Minit}}</td>
+            <td>{{Lname}}</td>
+            <td>{{Ssn}}</td>
+            <td>{{Bdata}}</td>
+            <td>{{Address}}</td>
+            <td>{{Sex}}</td>
+            <td><input type="text" name = "salary" placeholder = {{Salary}}></td>
+            {{!-- salary 값을 원하는 값으로 수정하기 위해 input을 이용하였다. --}}
+            <td>{{Super_ssn}}</td>
+            <td>{{Dno}}</td>
+            <td><input type="submit" value="수정"></td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
